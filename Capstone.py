@@ -29,6 +29,7 @@ plt.figure(figsize=(20, 6))
 plt.plot(num_complaints_by_date["Date received_x"],num_complaints_by_date["Complaint ID_x"])
 plt.title("Number of Complaints by Date")
 plt.show()
+# It appears that the month of April has the most complaints per month.
 
 product_responses = pd.DataFrame(all_complaints.groupby("Product")["Timely response?"].value_counts().reset_index())
 product_responses_yes = product_responses[product_responses["Timely response?"] == "Yes"]
